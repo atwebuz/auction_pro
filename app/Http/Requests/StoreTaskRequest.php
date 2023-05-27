@@ -15,8 +15,20 @@ class StoreTaskRequest extends FormRequest
             ],
             'description' => [
                 'required', 'string',
-            ]
+            ],
+            'start_time' => [
+                'required', 'date',
+            ],
+            'end_time' => [
+                'required', 'date',
+            ],
+            'current_price' => [
+                'required', 'integer',
+            ],
+        
         ];
+
+    
     }
 
     public function authorize()

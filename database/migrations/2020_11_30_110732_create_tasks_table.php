@@ -12,6 +12,9 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->timestamp('start_time')->nullable();
+            $table->timestamp('end_time')->nullable();
+            $table->decimal('current_price', 8, 2)->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

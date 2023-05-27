@@ -22,10 +22,38 @@
                         </div>
 
                         <div class="px-4 py-5 bg-white sm:p-6">
+                            <label for="current_price" class="block font-medium text-sm text-gray-700">current_price</label>
+                            <input type="text" name="current_price" id="current_price" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('current_price', '') }}" />
+                            @error('current_price')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="description" class="block font-medium text-sm text-gray-700">Description</label>
                             <input type="text" name="description" id="description" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('description', $task->description) }}" />
                             @error('description')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <label for="start_time" class="block font-medium text-sm text-gray-700">start_time</label>
+                            <input type="date" name="start_time" id="start_time" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('start_time', '') }}" />
+                            @error('start_time')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <label for="end_time" class="block font-medium text-sm text-gray-700">end_time</label>
+                            <input type="date" name="end_time" id="end_time" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('end_time', '') }}" />
+                            @error('end_time')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
